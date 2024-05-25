@@ -1,0 +1,77 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white !important;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white !important;
+}
+
+.c-dashboard-hw {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: calc(100% - 250px);
+  left: 250px;
+  background-color: #ffb166;
+  height: 60px;
+  /* border-left: 1px solid #a9cde3; */
+  z-index: 99;
+  /* border-bottom: 1px solid #a9cde3; */
+  display: flex;
+  align-items: center;
+  padding: 0 0px 0 15px;
+}
+
+.c-dashboard-w {
+  padding-left: 270px;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+.c-sidebar-w {
+  position: fixed;
+  height: 100vh;
+  /* background-color: var(--blue-text); */
+  width: 250px;
+  left: 0;
+  top: 0;
+}
+
+.c-dashboard-w.active {
+  padding-left: 90px;
+}
+
+.c-dashboard-w.active .c-dashboard-hw {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.c-dashboard-w.active .c-sidebar-w {
+  width: 80px;
+}
+
+.c-dashboard-w,
+.c-sidebar-w,
+.c-dashboard-hw {
+  transition: 0.5s;
+}
+
+.pro-menu-item a.active {
+  color: var(--main-blue); /* put any color you want */
+  font-weight: 500;
+}
+
+/* This is for submenu item */
+.nav-member .react-slidedown .pro-menu-item a.active {
+  color: #003642; /* put any color you want */
+  font-weight: 500;
+}
