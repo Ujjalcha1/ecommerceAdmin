@@ -1,6 +1,11 @@
+import axios from "axios";
+
 export default class brandService {
-  brandRegister = async () => {
+  static brandRegister = async (payload:any) => {
     try {
-    } catch (e) {}
+      await axios.post(`process.env.VITE_BASE_URL/brand-register`,payload)
+    } catch (e:any) {
+      throw new Error(e)
+    }
   };
 }
